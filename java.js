@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger Menu
+  // Hamburger Menu
   const hamburger = document.querySelector('.hamburger');
   const navMenu = document.querySelector('.nav-menu');
   const navLink = document.querySelectorAll('.nav-link');
@@ -14,33 +14,33 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.remove('active');
   }));
 
-    // Certificates
+  // Certificates
   const certificatesData = [
     {
-        title: 'Responsive Web Design',
-        image: 'assets/freecodcamp-certificate.png',
+      title: 'Responsive Web Design',
+      image: 'assets/freecodcamp-certificate.png',
     },
     {
-        title: 'JavaScript',
-        image: 'assets/freecodcamp-certificate.png',
+      title: 'JavaScript',
+      image: 'assets/freecodcamp-certificate.png',
     },
     {
-        title: 'JavaScript',
-        image: 'assets/freecodcamp-certificate.png',
-    }
-    ];
+      title: 'JavaScript',
+      image: 'assets/freecodcamp-certificate.png',
+    },
+  ];
 
   const certificateContent = document.getElementById('certificate-content');
 
   function loadCertificates() {
-  certificateContent.innerHTML = '';
+    certificateContent.innerHTML = '';
 
-        // Title
-  const certificationTitle = document.createElement('h2');
-  certificationTitle.innerText = 'Certification of Completion';
-  certificateContent.insertAdjacentElement('beforebegin', certificationTitle);
+    // Title
+    const certificationTitle = document.createElement('h2');
+    certificationTitle.innerText = 'Certification of Completion';
+    certificateContent.insertAdjacentElement('beforebegin', certificationTitle);
 
-  certificatesData.forEach((cert) => {
+    certificatesData.forEach((cert) => {
       const certificateDiv = document.createElement('div');
       certificateDiv.classList.add('certificate');
 
@@ -70,24 +70,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const projects = [
     {
-      src: 'assets/pro-2.png', 
-      title: 'Project 1', 
-      description: 'Description for Project 1', 
-      technologies: ['HTML', 'CSS', 'JS'], 
-      sourceLink: 'https://source1.com', 
+      src: 'assets/pro-2.png',
+      title: 'Project 1',
+      description: 'Description for Project 1',
+      technologies: ['HTML', 'CSS', 'JS'],
+      sourceLink: 'https://source1.com',
       liveLink: 'https://live1.com',
     },
     {
-      src: 'assets/pro-2.png', 
-      title: 'Project 2', 
-      description: 'Description for Project 2', 
-      technologies: ['HTML', 'CSS', 'JS'], 
-      sourceLink: 'https://source2.com', 
+      src: 'assets/pro-2.png',
+      title: 'Project 2',
+      description: 'Description for Project 2',
+      technologies: ['HTML', 'CSS', 'JS'],
+      sourceLink: 'https://source2.com',
       liveLink: 'https://live2.com',
     },
     {
-      src: 'assets/pro-2.png', 
-      title: 'Project 3', 
+      src: 'assets/pro-2.png',
+      title: 'Project 3',
       description: 'Description for Project 3',
       technologies: ['HTML', 'CSS', 'JS'],
       sourceLink: 'https://source3.com',
@@ -100,23 +100,23 @@ document.addEventListener('DOMContentLoaded', () => {
       technologies: ['HTML', 'CSS', 'JS'],
       sourceLink: 'https://source4.com',
       liveLink: 'https://live4.com',
-  },
-  {
+    },
+    {
       src: 'assets/project5.png',
       title: 'Project 5',
       description: 'Description for Project 5',
       technologies: ['HTML', 'CSS', 'JS'],
       sourceLink: 'https://source5.com',
       liveLink: 'https://live5.com',
-  },
-  { 
+    },
+    {
       src: 'assets/project6.png',
       title: 'Project 6',
       description: 'Description for Project 6',
       technologies: ['HTML', 'CSS', 'JS'],
       sourceLink: 'https://source6.com',
       liveLink: 'https://live6.com',
-  },
+    },
   ];
 
   let currentIndex = 0;
@@ -153,8 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
-  const showPopupMenu = (index) => {
-  const project = projects[index];
+    const showPopupMenu = (index) => {
+    const project = projects[index];
     document.querySelector('#popup-title').textContent = project.title;
     document.querySelector('#popup-img').src = project.src;
     document.querySelector('#popup-description').textContent = project.description;
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const techList = document.querySelector('#popup-tech-list');
     techList.innerHTML = '';
-    project.technologies.forEach(tech => {
+    project.technologies.forEach('tech', () => {
       const listItem = document.createElement('li');
       listItem.textContent = tech;
       techList.appendChild(listItem);
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'assets/pro-2.png',
   ];
 
-  additionalImages.forEach(src => {
+  additionalImages.forEach('src', () => {
     const img = document.createElement('img');
     img.src = src;
     img.alt = 'Additional Image';
@@ -207,8 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const circles = document.querySelectorAll('.circle');
-  circles.forEach(circle => {
-  const percentage = circle.getAttribute('data-percentage');
+  circles.forEach('circle', () => {
+    const percentage = circle.getAttribute('data-percentage');
     circle.style.setProperty('--percentage', percentage);
-    });
   });
+});
