@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     learnMoreButton.addEventListener('click', () => {
       showPopupMenu(currentIndex);
-    });    
+    });
   };
 
   const showPopupMenu = (index) => {
