@@ -148,12 +148,12 @@ document.addEventListener('DOMContentLoaded', () => {
     item.appendChild(hoverContent);
     carousel.appendChild(item);
 
-    learnMoreButton.addEventListener('click', () => {
+    learnMoreButton.addEventListener(click => {
       showPopupMenu(currentIndex);
     });
   };
 
-    const showPopupMenu = (index) => {
+  const showPopupMenu = (index) => {
     const project = projects[index];
     document.querySelector('#popup-title').textContent = project.title;
     document.querySelector('#popup-img').src = project.src;
@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const techList = document.querySelector('#popup-tech-list');
     techList.innerHTML = '';
-    project.technologies.forEach('tech', () => {
+    project.technologies.forEach(tech => {
       const listItem = document.createElement('li');
       listItem.textContent = tech;
       techList.appendChild(listItem);
@@ -196,7 +196,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'assets/pro-2.png',
   ];
 
-  additionalImages.forEach('src', () => {
+  additionalImages.forEach(src => {
     const img = document.createElement('img');
     img.src = src;
     img.alt = 'Additional Image';
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', () => {
   const circles = document.querySelectorAll('.circle');
-  circles.forEach('circle', () => {
+  circles.forEach(circle => {
     const percentage = circle.getAttribute('data-percentage');
     circle.style.setProperty('--percentage', percentage);
   });
