@@ -148,9 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
     item.appendChild(hoverContent);
     carousel.appendChild(item);
 
-    learnMoreButton.addEventListener('click', (event) => {
+    learnMoreButton.addEventListener('click', () => {
       showPopupMenu(currentIndex);
-    });
+    });    
   };
 
   const showPopupMenu = (index) => {
